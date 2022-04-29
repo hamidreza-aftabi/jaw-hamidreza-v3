@@ -1,4 +1,4 @@
-package artisynth.istar.hamidreza2.models.dynjaw;
+package artisynth.istar.hamidreza3.models.dynjaw;
 
 import artisynth.core.materials.AxialMuscleMaterial;
 import artisynth.core.mechmodels.MultiPointMuscle;
