@@ -1098,6 +1098,10 @@ public class JawModel extends MechModel implements ScalableUnits,
    return marker;
 }
    
+   
+   
+   
+   
    public void addFixedMarkers() {
       // get fixed markers for jaw
       FrameMarker m;
@@ -1215,6 +1219,10 @@ public class JawModel extends MechModel implements ScalableUnits,
    
    
 
+   
+
+   
+   
    
    
    private void setupRenderProps() {

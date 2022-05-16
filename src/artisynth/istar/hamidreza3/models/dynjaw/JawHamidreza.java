@@ -1,5 +1,6 @@
 package artisynth.istar.hamidreza3.models.dynjaw;
 
+import java.awt.Color;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,7 +8,10 @@ import java.util.HashMap;
 import artisynth.core.inverse.InverseManager;
 import artisynth.core.inverse.TrackingController;
 import artisynth.core.inverse.InverseManager.ProbeID;
+import artisynth.core.mechmodels.FrameMarker;
 import artisynth.core.mechmodels.Muscle;
+import maspack.matrix.Point3d;
+import maspack.render.RenderProps;
 
 public class JawHamidreza extends JawLarynxDemo{
 
@@ -24,8 +28,25 @@ public class JawHamidreza extends JawLarynxDemo{
        
 	   super.build (args);
 	   
-	    System.out.print("HI");
+	   
 	    
+	   Point3d leftPt = new Point3d(21.827346, -33.787125, 30.013799);
+	   FrameMarker leftInc = new FrameMarker(myJawModel.rigidBodies().get("jaw"), leftPt);
+	   leftInc.setName("LeftIncisior");
+	   myJawModel.addFrameMarker(leftInc);
+	   RenderProps.setPointColor(leftInc, Color.GREEN);
+	    
+	    
+	   
+	   Point3d rightPt = new Point3d(-20.029467, -36.919036, 29.779172);
+	   FrameMarker rightInc = new FrameMarker(myJawModel.rigidBodies().get("jaw"), rightPt);
+	   rightInc.setName("RightIncisior");
+	   myJawModel.addFrameMarker(rightInc);
+	   RenderProps.setPointColor(rightInc, Color.RED);
+	    
+	   
+	   
+	   
 	    InsversMuscles.put("lip","Left Inferior Lateral Pterygoid");
 		InsversMuscles.put("rip","Right Inferior Lateral Pterygoid");
 		InsversMuscles.put("lsp","Lateral Pterygoid");
@@ -54,8 +75,8 @@ public class JawHamidreza extends JawLarynxDemo{
 		InsversMuscles.put("rdm","Right Deep Masseter");
 
 
-       
-       inverseSetup();
+		
+        inverseSetup();
 
            
    }
