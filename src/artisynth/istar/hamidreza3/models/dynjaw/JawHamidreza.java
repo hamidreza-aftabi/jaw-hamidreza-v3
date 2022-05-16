@@ -32,7 +32,7 @@ public class JawHamidreza extends JawLarynxDemo{
 	    
 	   Point3d leftPt = new Point3d(21.827346, -33.787125, 30.013799);
 	   FrameMarker leftInc = new FrameMarker(myJawModel.rigidBodies().get("jaw"), leftPt);
-	   leftInc.setName("LeftIncisior");
+	   leftInc.setName("leftinncisior");
 	   myJawModel.addFrameMarker(leftInc);
 	   RenderProps.setPointColor(leftInc, Color.GREEN);
 	    
@@ -40,7 +40,7 @@ public class JawHamidreza extends JawLarynxDemo{
 	   
 	   Point3d rightPt = new Point3d(-20.029467, -36.919036, 29.779172);
 	   FrameMarker rightInc = new FrameMarker(myJawModel.rigidBodies().get("jaw"), rightPt);
-	   rightInc.setName("RightIncisior");
+	   rightInc.setName("rightincisior");
 	   myJawModel.addFrameMarker(rightInc);
 	   RenderProps.setPointColor(rightInc, Color.RED);
 	    
