@@ -96,7 +96,13 @@ public class JawHamidreza extends JawLarynxDemo{
 		}
 		
 		myTrackingController.addMotionTarget(myJawModel.frameMarkers().get("lowerincisor"));
-		myTrackingController.addL2RegularizationTerm(0.1);
+		myTrackingController.addMotionTarget(myJawModel.frameMarkers().get("leftincisor"));
+		myTrackingController.addMotionTarget(myJawModel.frameMarkers().get("rightincisor"));
+
+		myTrackingController.addL2RegularizationTerm(0.1327);
+	    myTrackingController.setMaxExcitationJump (0.1);
+	    myTrackingController.setUseKKTFactorization(myEditableP);
+		myTrackingController.setNormalizeH(true);
 		myTrackingController.createProbesAndPanel (this);
 	     
 		InverseManager.setInputProbeData (
