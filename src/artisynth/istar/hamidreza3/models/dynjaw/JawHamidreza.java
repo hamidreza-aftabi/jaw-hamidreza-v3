@@ -28,23 +28,31 @@ public class JawHamidreza extends JawLarynxDemo{
        
 	   super.build (args);
 	   
+
+	   myJawModel.rigidBodies().get("jaw").setFrameDamping (40);
+	   myJawModel.rigidBodies().get("hyoid").setFrameDamping (100);
+	   myJawModel.rigidBodies().get("thyroid").setFrameDamping (20);
+	   myJawModel.rigidBodies().get("cricoid").setFrameDamping (20);
 	   
 	    
-	   Point3d leftPt = new Point3d(21.827346, -33.787125, 30.013799);
+	   
+	   Point3d leftPt = new Point3d(10.490128,-42.139055,17.073866);
 	   FrameMarker leftInc = new FrameMarker(myJawModel.rigidBodies().get("jaw"), leftPt);
 	   leftInc.setName("leftincisor");
 	   myJawModel.addFrameMarker(leftInc);
 	   RenderProps.setPointColor(leftInc, Color.GREEN);
-	    
-	    
-	   
-	   Point3d rightPt = new Point3d(-20.029467, -36.919036, 29.779172);
+	     
+	       
+	       
+	      
+	   Point3d rightPt = new Point3d(-34.478022,-12.191832,31.320838);
 	   FrameMarker rightInc = new FrameMarker(myJawModel.rigidBodies().get("jaw"), rightPt);
 	   rightInc.setName("rightincisor");
 	   myJawModel.addFrameMarker(rightInc);
 	   RenderProps.setPointColor(rightInc, Color.RED);
-	    
-	   
+	      
+
+	      
 	   
 	   
 	    InsversMuscles.put("lip","Left Inferior Lateral Pterygoid");
@@ -81,6 +89,9 @@ public class JawHamidreza extends JawLarynxDemo{
            
    }
    
+   
+   
+   
 
    public void inverseSetup() {
 		TrackingController myTrackingController = new TrackingController(myJawModel, "incisor_disp");
@@ -101,7 +112,7 @@ public class JawHamidreza extends JawLarynxDemo{
 
 		myTrackingController.addL2RegularizationTerm(0.1327);
 	    myTrackingController.setMaxExcitationJump (0.1);
-	    myTrackingController.setUseKKTFactorization(myEditableP);
+	    //myTrackingController.setUseKKTFactorization(myEditableP);
 		myTrackingController.setNormalizeH(true);
 		myTrackingController.createProbesAndPanel (this);
 	     
