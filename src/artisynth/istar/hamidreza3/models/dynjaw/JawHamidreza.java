@@ -71,6 +71,8 @@ public class JawHamidreza extends JawLarynxDemo{
 		InsversMuscles.put("rad","Right Anterior Digastric");
 		InsversMuscles.put("lam","Left Mylohyoid");
 		InsversMuscles.put("ram","Right Mylohyoid");
+		//InsversMuscles.put("lpm","Left Posterior Mylohyoid");
+		//InsversMuscles.put("rpm","Right Posterior Mylohyoid");
 		InsversMuscles.put("lgh","Left Geniohyoid");
 		InsversMuscles.put("rgh","Right Geniohyoid");
 		InsversMuscles.put("lpd","Left Posterior Digastric");
@@ -92,7 +94,7 @@ public class JawHamidreza extends JawLarynxDemo{
 
 
 		
-        //inverseSetup();
+        inverseSetup();
         
         
         
