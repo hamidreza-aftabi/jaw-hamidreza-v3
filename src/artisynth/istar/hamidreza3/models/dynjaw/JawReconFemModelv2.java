@@ -379,7 +379,7 @@ public class JawReconFemModelv2 extends RootModel {
       // create FEM representing the plate by reading in an exixsting ArtiSynth
       // hex-based FEM model, contained in the file "plate.art" in the geometry
       // folder
-      String platePath = myGeoDir + "plate.art";
+      String platePath = myGeoDir + "plate2.art";
       try {
          // read the FEM using the loadComponent utility
          myPlate = ComponentUtils.loadComponent (
